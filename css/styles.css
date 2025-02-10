@@ -1,0 +1,368 @@
+/*
+    Written by Sita Evans
+    The Homie Front, 2025
+    sitaevans@gmail.com
+*/
+
+/******************************************************/
+/******************** Page & Body *********************/
+/******************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fffefa;
+    font-size: 1.25rem;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #282020;
+}
+
+/******************************************************/
+/********************* Header ***********************/
+/******************************************************/
+
+.header {
+    display: flex;
+    background-color: #ffc456;
+}
+
+.links {
+    background-color: #fffefa;
+}
+
+.svg {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 50%;
+    border: solid #f17171 1em;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0 0 0 50%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.links a {
+    color: #282020;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 2rem;
+    letter-spacing: 0.25em;
+    text-underline-offset: 0.2em;
+    text-decoration: underline #f17171 0.1em;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    text-decoration: underline #ffc456 0.1em;
+}
+
+.links a:active {
+    text-decoration: underline #282020 0.1em;
+}
+
+small {
+    font-size: smaller;
+    letter-spacing: 0.5em;
+}
+
+/******************************************************/
+/********************** Content ***********************/
+/******************************************************/
+.content {
+    padding: -10em 0 0 0;
+}
+
+h2 {
+    font-family: "Times New Roman", Times, serif;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ffc456;
+    width: 100%;
+    text-align: left;
+}
+
+.content a {
+    color: #282020;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    text-underline-offset: 0.2em;
+    text-decoration: underline #ffc456 2px;
+    transition: 0.3s;
+    margin: -10em 0 0 0;
+}
+
+.content a:hover {
+    text-decoration: underline #f17171 2px;
+}
+
+/******************************************************/
+/*********************** Tables ***********************/
+/******************************************************/
+table {
+    background-color: #fff8eb;
+    border: solid 4px #fff;
+    border-radius: 1em;
+    margin: 1em auto 1em auto;
+    padding: 1em;
+    width: 90%;
+}
+
+td {
+    padding: 0.5em;
+}
+
+.project-table {
+    display: block;
+}
+
+.project-table tr {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.project-table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+/******************************************************/
+/********* Buttons (standalone, rectangular) **********/
+/******************************************************/
+
+.btn {
+    color: #282020;
+    background: #ffc456;
+    border-radius: 2em;
+    margin: 1em auto auto;
+    padding: 0.5em 1.5em;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
+    display: block;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    text-decoration: none;
+    width: 30%;
+}
+
+.btn a {
+    margin: 0;
+    text-decoration: none;
+}
+
+.btn a:hover {
+    background: #fb8c8c;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+}
+
+.btn a:active {
+    background: #fb8c8c;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+}
+
+/******************************************************/
+/********** Group of buttons (circle style) ***********/
+/******************************************************/
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    position: relative;
+    width: 100%;
+    padding: 1em;
+}
+
+#buttons ul {
+    list-style: none;
+}
+
+#buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    padding: 0em 0.15em 0em 4em;
+    margin: 0.5em 0 0 -15.5em;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+#buttons .btn:hover {
+    margin: 0.5em 0 0 -14em;
+    padding: -5em 0 0 0;
+    background: #fb8c8c;
+}
+
+#buttons .btn::after {
+    content: "➜";
+    font-size: 36pt;
+    opacity: 0;
+    transition: 0.5s;
+    color: white;
+}
+
+#buttons .btn:hover::after {
+    opacity: 100;
+    margin-left: 0.25em;
+    color: white;
+}
+
+#buttons .btn:active {
+    background: #fb8c8c;
+}
+
+/******************************************************/
+/******************* Media Queries ********************/
+/******************************************************/
+@media screen and (min-width: 600px) {
+    /* Content */
+    .content {
+        margin: 5rem 0 0 10em;
+        z-index: 2;
+    }
+    /* Header */
+    .title {
+        margin-top: 5rem;
+        font-size: 2.75rem;
+        background-color: #ffebc6;
+        padding: 0.25em 2.5em 0.25em 2em;
+        margin: 10% auto auto 22%;
+    }
+
+    .links ul {
+        list-style: none;
+        padding: 0 1em 0 60%;
+        margin: 1em;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .links li {
+        margin-right: 2em;
+    }
+}
+
+@media screen and (min-width: 724px) {
+    /* Header */
+    .title {
+        margin-top: 5rem;
+        font-size: 2.75rem;
+        background-color: #ffebc6;
+        padding: 0 2.5em 0.25em 2em;
+        margin: 5% auto auto 22%;
+    }
+
+    .header {
+        background: #ffc456;
+        position: relative;
+        z-index: 1;
+    }
+
+    .svg {
+        display: block;
+        position: relative;
+        top: -3em;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .logo {
+        display: fixed;
+        position: absolute;
+        z-index: 2;
+        margin-top: 1%;
+        margin-left: 5%;
+        width: 20%;
+    }
+
+    .links {
+        margin: -17% 0 0 40%;
+        justify-content: center;
+    }
+
+    .links ul {
+        list-style: none;
+        padding: 0 1em 0 0;
+        margin: 1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .links li {
+        margin-right: 2em;
+        z-index: 2;
+    }
+
+    /* Content */
+    .content {
+        margin: -19rem 3em 0 28%;
+    }
+
+    /* Table */
+
+    .project-table {
+        display: table;
+    }
+
+    .project-table tr {
+        display: table-row;
+    }
+
+    .project-table td {
+        display: table-cell;
+        width: 50%;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    /* Circle Buttons */
+    #buttons ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1em;
+        position: relative;
+        padding: 1em;
+        flex-wrap: wrap;
+    }
+
+    #buttons .btn {
+        border-radius: 50%;
+        padding: 2em;
+        margin: 0.5em;
+        font-size: 2rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        transition: 0.4s;
+        text-decoration: none;
+    }
+
+    #buttons .btn:hover {
+        margin: -1em 0.5em 0 0.5em;
+    }
+}
